@@ -236,8 +236,8 @@
 //	return 0;
 //}
 
-//strerror 错误信息
-//int main()
+////strerror 错误信息 程序运行时的错误
+//int main() //库函数的错误码会存到全局变量errno中 
 //{
 //	int i = 0;
 //	for (i = 0; i < 10; i++)
@@ -247,38 +247,38 @@
 
 //int main()
 //{
-//	//C语言中可以操作文件
-//	//1.操作文件的步骤
-//	//2.读/写
-//	//3.关闭文件
+////	C语言中可以操作文件
+////	1.操作文件的步骤
+////	2.读/写
+////	3.关闭文件
 //	FILE* pf = fopen("data.txt", "r");
 //	if (pf == NULL)
 //	{
-//		printf("%s\n", strerror(errno));
+//		printf("fopen: %s\n", strerror(errno));
 //		perror("fopen");
 //		
 //			return 1;
 //	}
-//	//读文件
-//	//
+////	读文件
+//	
 //
 //
-//	//关闭文件
+////	关闭文件
 //	fclose(pf);
 //
 //		return 0;
 //}
 
-//字符分类函数
+////字符分类函数
 //int main()
 //{
-//	printf("%d\n", isupper('a'));
-//	printf("%d\n", isdigit('2'));
-//	printf("%d\n", tolower('A'));
-//	printf("%d\n", tolower('s'));
+//	printf("%d\n", isupper('a')); //大小字符
+//	printf("%d\n", isdigit('2')); //数字字符
+//	printf("%c\n", tolower('A')); //大写转小写
+//	printf("%c\n", toupper('s')); //小写转大写
 //	char arr[20] = { 0 };
-//	gets(arr);//遇到空格继续
-//	//pringtf("%s\n",arr);
+////	gets(arr);//遇到空格继续
+//	pringtf("%s\n",arr);
 //	char* p = arr;
 //	while (*p)
 //	{
@@ -288,6 +288,7 @@
 //		}
 //		p++;
 //	}
-//	printf("%s\n", arr);
+//   printf("%s\n", arr);
 //	return 0;
 //}
+//

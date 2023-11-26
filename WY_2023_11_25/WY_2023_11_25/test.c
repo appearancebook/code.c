@@ -245,19 +245,19 @@
 
 ////枚举
 ////枚举的定义 使用
-//enum Color
+//enum color
 //{
-//	RED=7,
-//	GREEN,
-//	BLUE,
+//	red=7,
+//	green,
+//	blue,
 //	//可能取值
 //};
 //int main()
 //{
-//	enum  Color c = GREEN;
-//	printf("%d\n", RED);
+//	enum  color c = green;
+//	printf("%d\n", red);
 //	printf("%d\n", c);
-//	printf("%d\n", BLUE);
+//	printf("%d\n", blue);
 //	
 //	return 0;
 //}

@@ -164,6 +164,41 @@
 //	return 0;
 //}
 
+
+
+////模拟strncpy
+//char* my_strncpy(char* dest, const char* src, int sz)
+//{
+//	assert(dest && src);
+//	char* ret = dest;
+//
+//
+//	while (*dest++ = *src++)  //当*src为'\0 '时跳出循环
+//		if (!--sz)            //当sz==0是跳出循环   
+//			return ret;
+//
+//
+//	                          //拷贝完后不加\0 拷贝数大于源字符串补'\0 '
+//	return ret;
+//}
+//
+//
+//int main()
+//{
+//	char arr1[30] = "abcdefyyyyyyyyy";
+//	char arr3[30] = "abcdefyyyyyyyyy";
+//	char* arr2 = "xxxx";
+//	strncpy(arr1, arr2, 7);
+//	my_strncpy(arr3, arr2, 7);
+//	printf("%s\n", arr1);
+//	printf("%s\n", arr3);
+//
+//
+//	return 0;
+//}
+
+
+
 ////strncat(arr1,arr2,n) 追加完后直接追加'\0' 最多追加一个完整的源字符串
 //int main()
 //{
@@ -172,6 +207,44 @@
 //	strncat(arr1, arr2,7);测试值2，7
 //	return 0;
 //}
+
+//模拟strcat
+
+//char* my_strncat(char* dest, const char* src, int sz)
+//{
+//	assert(dest && src);
+//	int i = 1;
+//	char* ret = dest;
+//
+//	//找到目标字符串的'\0'
+//	while (*dest++)
+//		;
+//
+//	//由于找到之后有++了一次，所以退回'\0'的位置
+//	dest--;
+//
+//	while (*dest++ = *src++)   //当*src为'\0 '时跳出循环
+//		if (!--sz)             //当sz=0时跳出循环   
+//			break;
+//
+//
+//	*dest = '\0';	           //追加完后直接追加'\0' 最多追加一个完整的源字符串
+//	return ret;
+//}
+//
+//int main()
+//{
+//	char arr1[30] = "abcdef\0yyyyyyyy";
+//	char arr3[30] = "abcdef\0yyyyyyyyy";
+//	char* arr2 = "xxxx";
+//	strncat(arr1, arr2, 7);
+//	my_strncat(arr3, arr2, 7);
+//	printf("%s\n", arr1);
+//	printf("%s\n", arr3);
+//
+//	return 0;
+//}
+
 
 ////strncmp(arr1,arr2,n) 只比较前n个字符
 //int main()

@@ -208,8 +208,8 @@
 //	return 0;
 //}
 
-//模拟strcat
-
+////模拟strncat
+//
 //char* my_strncat(char* dest, const char* src, int sz)
 //{
 //	assert(dest && src);
@@ -256,6 +256,40 @@
 //
 //	return 0;
 //}
+
+////模拟实现strncpm
+//
+//#include <stdio.h>
+//#include <string.h>
+//#include <assert.h>
+//
+//int my_strncmp(const char* str1, const char* str2, int sz)
+//{
+//	assert(str1 && str2);
+//	while (*str1 == *str2 && --sz)
+//	{
+//		if (*str1 == '\0')
+//			return 0;
+//		str1++;
+//		str2++;
+//	}
+//	return *str1 - *str2;
+//}
+//
+//int main()
+//{
+//	char* a1 = "appearancebook";
+//	char* a2 = "appbook";
+//	char  arr[] = "appbook";
+//	printf("%d\n", strncmp(a1, a2, 3));
+//	printf("%d\n", my_strncmp(a1, a2, 3));
+//	printf("%d\n", strncmp(a2, a1, sizeof(a2)));
+//	printf("%d\n", my_strncmp(a2, a1, sizeof(a2)));
+//	printf("%d\n", strncmp(a2, arr, sizeof(a2)));
+//	printf("%d\n", my_strncmp(a2, arr, sizeof(a2)));
+//	return 0;
+//}
+
 
 ////strstr - 字符串中找子字符串
 //
